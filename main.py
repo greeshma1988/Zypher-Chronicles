@@ -8,12 +8,14 @@ save_keys(private_key, public_key)
 def send_message():
     message = message_entry.get()
     encrypted_message = encrypt_message(public_key, message)
-    
+    # Send the encrypted message to the server
+    # Here, you would have your network code to send the message
     messagebox.showinfo("Message Sent", "Your message has been encrypted and sent.")
 
 def receive_message():
-    
-    encrypted_message = b'...'  
+    # Receive the encrypted message from the server
+    # Here, you would have your network code to receive the message
+    encrypted_message = b'...'  # Placeholder for the actual encrypted message
     decrypted_message = decrypt_message(private_key, encrypted_message)
     messagebox.showinfo("Message Received", f"Decrypted message: {decrypted_message}")
 
